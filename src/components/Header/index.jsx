@@ -1,17 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import SunIcon from "../icons/SunIcon";
 import MoonIcon from "../icons/MoonIcon";
+import useTheme from "../../hooks/useTheme";
 const Header = () => {
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    document.documentElement.className = theme;
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
+  const [theme, toggleTheme] = useTheme();
   return (
     <div className="flex mb-6 mt-24">
       <h1>devfinder</h1>
