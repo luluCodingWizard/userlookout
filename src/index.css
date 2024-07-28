@@ -8,7 +8,7 @@
     @apply tracking-widest;
   }
   html:not(.dark) {
-    @apply bg-white-light-mode text-blue-grey;
+    @apply bg-light-gray text-blue-grey;
   }
 
   html.dark {
